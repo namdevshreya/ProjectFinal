@@ -1,0 +1,149 @@
+git branch
+git branch -a  {local + remote}
+git branch -r    {remote}
+
+Q. Create another branch b2 from b1 
+git checkout b1
+git branch b2
+
+Q. Create a new file in b2 branch [add, commit] and then use ls
+git checkout b2
+Create a new file 
+git add .
+git commit -m  "done"
+
+Q. Observe the different number of files in b1, b2, main i ur file folder
+git checkout b1
+ls
+git checkout b2
+ls
+git checkout main
+ls
+
+3 BRANCHES
+
+MAIN, B1, B2
+
+Q. VERIFY THAT B2 IS AHEAD OF B1
+
+git checkout b2
+
+ls (4)
+
+git checkout b1
+
+ls (3)
+
+I can say that B2 IS AHEAD OF B1
+
+Merging 
+
+
+local merge
+
+b2  ahead   b1 
+
+b2>>>>>>>>>>>>>merge>>>>>>>>>>>>>>>b1
+
+git checkout b1
+
+Now u r at b1
+
+git merge b2
+
+Now, u will observe b2 is merged into b1
+
+finally, contents of b1 and b2 are same ...check using ls
+
+git branch
+
+main
+b1
+b2
+
+git branch -D b2
+
+b2 merge into b1
+
+How to delete a local branch b2
+
+git checkout main
+git branch -d b2
+
+Now, b2 is deleted and u can check
+
+git branch 
+main
+b1
+
+Q. Publish the local branch b1 on the github.
+
+git checkout b1
+git push origin b1
+
+Reload github and u will observe the branch b1 on remote
+
+git branch 
+
+* Delete the local branch b1
+
+git checkout main
+git branch -d b1
+
+U will observe branch is deleted only from local but still it is visible on the remote?????
+
+git branch
+
+To delete the remote branch 
+
+git push origin --delete b1
+
+AND OBSERVE THE CHANGES ON REMOTE AND LOCAL
+
+git branch -a  { local + remote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Remote branch exist but it is not there on local
+
+git fetch origin bremote
+
+git checkout bremote
+
+Now,
+git branch
+
+and that remote branch is also available on local branch
+
+======================================================================
+
+push,  pull  ,
+
+New branch on remote :::::::::::::::::::::::: fetch ::::::::::::::::::to have on local
+
+New branch on local ::::::::::::::::::::::::push ::::::::::::::::::to publish on remote 
+======================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
